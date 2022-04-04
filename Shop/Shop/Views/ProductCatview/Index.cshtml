@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Shop.Models.ProductCatview>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ProductCatview</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.PCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPrice)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PQuantity)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PPrice)
+            </td>
+
+
+            
+        </tr>
+        }
+    </tbody>
+</table>
