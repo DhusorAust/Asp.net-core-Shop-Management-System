@@ -1,0 +1,54 @@
+﻿@model Shop.Models.Products
+
+@{
+    ViewData["Title"] = "Edit_Product";
+}
+
+<h1>Edit_Product</h1>
+
+<h4>Products</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit_Product">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PCode" />
+            <div class="form-group">
+                <label asp-for="PName" class="control-label"></label>
+                <input asp-for="PName" class="form-control" />
+                <span asp-validation-for="PName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PCost" class="control-label"></label>
+                <input asp-for="PCost" class="form-control" />
+                <span asp-validation-for="PCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PQuantity" class="control-label"></label>
+                <input asp-for="PQuantity" class="form-control" />
+                <span asp-validation-for="PQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PPrice" class="control-label"></label>
+                <input asp-for="PPrice" class="form-control" />
+                <span asp-validation-for="PPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCode" class="control-label"></label>
+                <input asp-for="CCode" class="form-control" />
+                <span asp-validation-for="CCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

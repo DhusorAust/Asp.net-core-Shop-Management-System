@@ -151,3 +151,4 @@ C:\Users\IT\source\repos\Shop\Shop\bin\Debug\netcoreapp3.1\Microsoft.IdentityMod
 C:\Users\IT\source\repos\Shop\Shop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\IT\source\repos\Shop\Shop\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\IT\source\repos\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Products\ProductPrice.cshtml.g.cs
+C:\Users\IT\source\repos\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Products\Edit_Product.cshtml.g.cs

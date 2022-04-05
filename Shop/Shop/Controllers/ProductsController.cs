@@ -61,29 +61,40 @@ namespace Shop.Controllers
         }
 
 
-        public List<Products> UpdatebyId(string code)
+        //public List<Products> UpdatebyId(string code)
 
+        //{
+            
+
+
+        //    var item1 = db.Products.Where(s => s.PCode.Equals(code)).Select(x => x.PName).FirstOrDefault();
+
+        //    item1 = "Redmi";
+
+            
+        //    db.SaveChanges();
+
+
+        //    var item = db.Products.Where(s => s.PCode.Equals(code)).ToList();
+
+
+        //    return item;
+
+        //}
+        public IActionResult Edit_Product(string code)
         {
-            
 
 
-            var item1 = db.Products.Where(s => s.PCode.Equals(code)).Select(x => x.PName).FirstOrDefault();
-
-            item1 = "Redmi";
-
-            
-            db.SaveChanges();
+            var data = db.Products.Find(code);
 
 
-            var item = db.Products.Where(s => s.PCode.Equals(code)).ToList();
-
-
-            return item;
-
+            return View(data);
         }
-        public IActionResult demo()
+        [HttpPost]
+        public IActionResult Edit_Product(Products p)
         {
             return View();
+
         }
     }
 }
